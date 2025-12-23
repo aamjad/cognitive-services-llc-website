@@ -1,4 +1,22 @@
 /* ========================================
+   Tailwind Animation Utilities
+   ======================================== */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+}
+
+/* ========================================
    Global Styles & Variables
    ======================================== */
 :root {
@@ -354,19 +372,21 @@ section {
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border-color);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     border-color: var(--primary-color);
 }
 
 .service-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-card h3 {
@@ -502,12 +522,13 @@ section {
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border-color);
 }
 
 .service-detail-card:hover {
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
 }
 
 .service-detail-header {
@@ -569,11 +590,24 @@ section {
     box-shadow: var(--shadow-md);
     padding: 3rem;
     border-top: 4px solid var(--primary-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industry-detail-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .industry-icon {
-    font-size: 4rem;
     margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industry-detail-card:hover .industry-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .industry-detail-card h2 {
@@ -1278,8 +1312,9 @@ section {
         padding: 1.25rem;
     }
 
-    .service-icon {
-        font-size: 2.5rem;
+    .service-icon svg {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .page-header h1 {
@@ -1292,6 +1327,16 @@ section {
 
     .section-subtitle {
         font-size: 1rem;
+    }
+    
+    .service-icon svg {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+    
+    .industry-icon svg {
+        width: 3rem !important;
+        height: 3rem !important;
     }
 }
 
