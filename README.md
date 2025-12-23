@@ -124,7 +124,7 @@ All content is in the HTML files. Simply edit the relevant HTML file to update:
 
 ## License
 
-Copyright © 2024 Cognitive Services LLC. All rights reserved.
+Copyright © 2026 Cognitive Services LLC. All rights reserved.
 
 ## Contact
 
