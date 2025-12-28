@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form Handling
+    // Contact Form Handling with Formspree
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -52,29 +52,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Create mailto link
-            const subject = encodeURIComponent('Contact from Cognitive Services LLC Website');
-            const body = encodeURIComponent(
-                `Name: ${name}\n` +
-                `Email: ${email}\n` +
-                `Company: ${formData.get('company') || 'N/A'}\n` +
-                `Industry: ${formData.get('industry') || 'N/A'}\n` +
-                `Service Interest: ${formData.get('service') || 'N/A'}\n\n` +
-                `Message:\n${message}`
-            );
-            
-            const mailtoLink = `mailto:aamjad@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            showFormMessage('Thank you for your message! Your email client should open shortly. If not, please email us directly at aamjad@gmail.com', 'success');
-            
-            // Reset form after a delay
-            setTimeout(function() {
-                contactForm.reset();
-            }, 3000);
+            // Disable submit button to prevent double submission
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                // Submit to Formspree
+                const response = await fetch('https://formspree.io/f/xlgrvjdv', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showFormMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (data.errors) {
+                        showFormMessage(data.errors.map(error => error.message).join(', '), 'error');
+                    } else {
+                        showFormMessage('There was an error submitting your message. Please try again or email us directly.', 'error');
+                    }
+                }
+            } catch (error) {
+                showFormMessage('There was a network error. Please check your connection and try again.', 'error');
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 
