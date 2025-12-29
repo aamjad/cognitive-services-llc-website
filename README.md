@@ -97,7 +97,7 @@ The contact email is referenced in multiple places:
 - All footer sections in HTML files
 - `script.js` - Form submission handler
 
-Update the email address `aamjad@gmail.com` wherever it appears.
+Update the email address `info@cognitiveserv.com` wherever it appears.
 
 ### Adding/Modifying Content
 
@@ -128,5 +128,5 @@ Copyright © 2026 Cognitive Services LLC. All rights reserved.
 
 ## Contact
 
-For questions about this website, contact: aamjad@gmail.com
+For questions about this website, contact: info@cognitiveserv.com
 
