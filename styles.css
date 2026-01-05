@@ -44,6 +44,29 @@
     --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --primary-light: #60a5fa;
+    --primary-50: #1e3a8a;
+    --secondary-color: #f1f5f9;
+    --accent-color: #34d399;
+    --accent-hover: #10b981;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
+    --bg-light: #1e293b;
+    --bg-lighter: #0f172a;
+    --bg-white: #0f172a;
+    --border-color: #334155;
+    --border-hover: #475569;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +85,7 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -128,7 +152,12 @@ a:hover {
     top: 0;
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .navbar {
+    background-color: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-wrapper {
@@ -232,6 +261,64 @@ a:hover {
 }
 
 /* ========================================
+   Dark Mode Toggle
+   ======================================== */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 1rem;
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    background-color: var(--bg-light);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.theme-toggle .sun-icon {
+    display: block;
+}
+
+.theme-toggle .moon-icon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: block;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ========================================
    Buttons
    ======================================== */
 .btn {
@@ -322,6 +409,7 @@ a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: background 0.3s ease;
 }
 
 .hero::before {
@@ -333,6 +421,10 @@ a:hover {
     bottom: 0;
     background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     pointer-events: none;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
 }
 
 .hero-title {
@@ -437,7 +529,7 @@ section {
     padding: 2.5rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease;
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
@@ -520,7 +612,7 @@ section {
     padding: 2.5rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease;
     border-left: 4px solid var(--primary-color);
     position: relative;
 }
@@ -575,7 +667,7 @@ section {
     padding: 2.5rem;
     background-color: var(--bg-white);
     border-radius: 1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease;
     border: 1px solid transparent;
 }
 
@@ -606,6 +698,7 @@ section {
     position: relative;
     overflow: hidden;
     padding: 6rem 0;
+    transition: background 0.3s ease;
 }
 
 .cta-section::before {
@@ -617,6 +710,10 @@ section {
     bottom: 0;
     background: radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     pointer-events: none;
+}
+
+[data-theme="dark"] .cta-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
 }
 
 .cta-content {
@@ -649,6 +746,11 @@ section {
     color: white;
     padding: 4rem 0;
     text-align: center;
+    transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #2563eb 100%);
 }
 
 .page-header h1 {
@@ -894,7 +996,7 @@ section {
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     text-align: center;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
 }
 
 .value-card:hover {
@@ -933,7 +1035,7 @@ section {
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     position: relative;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
 }
 
 .approach-step:hover {
@@ -969,6 +1071,7 @@ section {
     background-color: var(--bg-white);
     padding: 3rem;
     border-radius: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .about-differentiators h2 {
@@ -1051,6 +1154,7 @@ section {
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease;
 }
 
 .contact-benefits h3 {
@@ -1083,6 +1187,7 @@ section {
     padding: 3rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-lg);
+    transition: background-color 0.3s ease;
 }
 
 .contact-form {
@@ -1111,6 +1216,8 @@ section {
     font-size: 1rem;
     font-family: inherit;
     transition: var(--transition);
+    background-color: var(--bg-white);
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -1176,6 +1283,7 @@ section {
     background-color: var(--secondary-color);
     color: white;
     padding: 3rem 0 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .footer-content {
@@ -1243,6 +1351,21 @@ section {
 
     .nav-wrapper {
         flex-wrap: wrap;
+    }
+
+    .nav-right {
+        gap: 0.5rem;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+        margin-left: 0.5rem;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
     }
 
     .logo {
