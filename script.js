@@ -3,14 +3,16 @@ function initDarkMode() {
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     
-    // Check for saved theme preference or default to system preference
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
+    // Theme is already applied by inline script in head, but ensure it's set
     if (savedTheme) {
         html.setAttribute('data-theme', savedTheme);
-    } else if (systemPrefersDark) {
+    } else {
+        // Default to dark mode
         html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
     }
     
     // Toggle theme on button click
@@ -23,7 +25,7 @@ function initDarkMode() {
         });
     }
     
-    // Listen for system theme changes
+    // Listen for system theme changes (only if no saved preference)
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
         if (!localStorage.getItem('theme')) {
             html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
