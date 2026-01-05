@@ -221,7 +221,7 @@ a:hover {
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--text-primary);
     text-decoration: none;
     transition: var(--transition);
 }
@@ -1312,10 +1312,14 @@ section {
    Footer
    ======================================== */
 .footer {
-    background-color: var(--secondary-color);
+    background-color: #0f172a;
     color: white;
     padding: 3rem 0 1rem;
     transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .footer {
+    background-color: #0a0f1a;
 }
 
 .footer-content {
