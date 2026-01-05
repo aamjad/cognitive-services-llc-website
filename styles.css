@@ -774,25 +774,51 @@ section {
    Page Header
    ======================================== */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
     transition: background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 [data-theme="dark"] .page-header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #2563eb 100%);
+    background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 50%, #1e293b 100%);
+}
+
+[data-theme="dark"] .page-header::before {
+    background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
 }
 
 .page-header h1 {
     color: white;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .page-header p {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* ========================================
@@ -817,19 +843,42 @@ section {
 }
 
 .service-detail-card:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
     transform: translateY(-4px);
+    border-color: var(--border-hover);
 }
 
 .service-detail-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     color: white;
     padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-detail-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.8) 0%, rgba(37, 99, 235, 0.6) 100%);
+}
+
+[data-theme="light"] .service-detail-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme="light"] .service-detail-header::before {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.6) 0%, rgba(37, 99, 235, 0.4) 100%);
 }
 
 .service-detail-header h2 {
     color: white;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .service-detail-content {
