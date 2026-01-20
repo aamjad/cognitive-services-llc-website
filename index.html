@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cognitive Services LLC - Design and deploy secure, production-grade AI systems that automate real business workflows">
+    <meta name="description"
+        content="Cognitive Services LLC - Design and deploy secure, production-grade AI systems that automate real business workflows">
     <title>Cognitive Services LLC - AI Solutions for Business</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <script>
         // Apply theme immediately to prevent flash of wrong theme
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             const theme = savedTheme || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -24,7 +27,7 @@
                 <div class="logo">
                     <a href="index.html">
                         <img src="logo.svg" alt="Cognitive Services LLC Logo" class="logo-img">
-                        <span class="logo-text">Cognitive Services LLC</span>
+                        <span class="logo-text">Cognitive Services</span>
                     </a>
                 </div>
                 <div class="nav-right">
@@ -37,10 +40,14 @@
                     </ul>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                         <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
                         </svg>
                         <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
                         </svg>
                     </button>
                     <div class="hamburger">
@@ -57,11 +64,12 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content" style="position: relative; z-index: 1;">
-                <h1 class="hero-title">Secure, Production-Grade AI Systems</h1>
-                <p class="hero-subtitle">We design and deploy secure, production-grade AI systems that automate real business workflows -- not demos</p>
+                <h1 class="hero-title">Automating Intelligence. Scaling Impact.</h1>
+                <p class="hero-subtitle">We engineer secure, production-grade AI systems that solve complex business
+                    challenges. No demos, just deployed value.</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
-                    <a href="services.html" class="btn btn-secondary">Our Services</a>
+                    <a href="contact.html" class="btn btn-primary">Start Transformation</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Solutions</a>
                 </div>
             </div>
         </div>
@@ -71,8 +79,9 @@
     <section class="positioning">
         <div class="container">
             <div class="positioning-content">
-                <h2>Our Mission</h2>
-                <p class="positioning-statement">We design and deploy secure, production-grade AI systems that automate real business workflows -- not demos</p>
+                <h2>Our Philosophy</h2>
+                <p class="positioning-statement">"We don't build proofs of concept. We build autonomous systems that
+                    drive revenue, efficiency, and competitive advantage."</p>
             </div>
         </div>
     </section>
@@ -80,62 +89,78 @@
     <!-- Services Overview -->
     <section class="services-overview">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive AI solutions tailored to your business needs</p>
+            <h2 class="section-title">Core Capabilities</h2>
+            <p class="section-subtitle">Enterprise-grade AI solutions engineered for reliability and scale</p>
             <div class="services-grid">
                 <div class="service-card group hover:shadow-xl transition-all duration-300 animate-fade-in">
                     <div class="service-icon transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
                         </svg>
                     </div>
-                    <h3>Agentic AI Implementation</h3>
-                    <p>Full-service implementation of autonomous AI agents that can reason, plan, and execute complex business workflows</p>
+                    <h3>Agentic AI Systems</h3>
+                    <p>Deploy autonomous agents that reason, plan, and execute complex workflows with minimal human
+                        oversight.</p>
                 </div>
                 <div class="service-card group hover:shadow-xl transition-all duration-300 animate-fade-in">
                     <div class="service-icon transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3>Generative AI Enablement</h3>
-                    <p>Transform your business with cutting-edge generative AI capabilities, from strategy to deployment</p>
+                    <h3>Generative Strategy</h3>
+                    <p>Move beyond chatbots. We integrate generative models deep into your value chain to create new
+                        products and services.</p>
                 </div>
                 <div class="service-card group hover:shadow-xl transition-all duration-300 animate-fade-in">
                     <div class="service-icon transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
                         </svg>
                     </div>
-                    <h3>Application Modernization</h3>
-                    <p>Modernize legacy systems with AI-powered enhancements and cloud-native architectures</p>
+                    <h3>Legacy Modernization</h3>
+                    <p>Revitalize aging infrastructure with AI-native architectures that reduce technical debt and
+                        accelerate velocity.</p>
                 </div>
                 <div class="service-card group hover:shadow-xl transition-all duration-300 animate-fade-in">
                     <div class="service-icon transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
                         </svg>
                     </div>
-                    <h3>AI Education & Training</h3>
-                    <p>Comprehensive training programs for developers and managers on AI best practices and responsible AI</p>
+                    <h3>AI Engineering Training</h3>
+                    <p>Upskill your engineering teams with deep-dives into LLM ops, prompt engineering, and safety
+                        frameworks.</p>
                 </div>
                 <div class="service-card group hover:shadow-xl transition-all duration-300 animate-fade-in">
                     <div class="service-icon transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                            </path>
                         </svg>
                     </div>
-                    <h3>Customer Support AI Agents</h3>
-                    <p>Intelligent conversational AI agents that provide 24/7 customer support with human-like understanding</p>
+                    <h3>Intelligent Support</h3>
+                    <p>Next-generation support agents that resolve issues with empathy and technical accuracy, available
+                        24/7/365.</p>
                 </div>
                 <div class="service-card group hover:shadow-xl transition-all duration-300 animate-fade-in">
                     <div class="service-icon transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
-                    <h3>Knowledge Base Search (RAG)</h3>
-                    <p>Retrieval-Augmented Generation systems for intelligent document search and information retrieval</p>
+                    <h3>Enterprise RAG</h3>
+                    <p>Secure Retrieval-Augmented Generation systems that unlock your institutional knowledge with
+                        pinpoint accuracy.</p>
                 </div>
             </div>
             <div class="text-center">
@@ -147,32 +172,33 @@
     <!-- Industries -->
     <section class="industries-overview">
         <div class="container">
-            <h2 class="section-title">Industries We Serve</h2>
-            <p class="section-subtitle">Specialized AI solutions for your industry</p>
+            <h2 class="section-title">Industries We Empower</h2>
+            <p class="section-subtitle">Domain-specific AI solutions built for regulatory compliance and performance</p>
             <div class="industries-grid">
                 <div class="industry-card">
-                    <h3>Healthcare</h3>
-                    <p>AI-powered solutions for patient care, diagnostics, and administrative automation</p>
+                    <h3>Healthcare & Pharma</h3>
+                    <p>Accelerating drug discovery and automating patient care workflows while maintaining HIPAA
+                        compliance.</p>
                 </div>
                 <div class="industry-card">
-                    <h3>Legal</h3>
-                    <p>Document analysis, contract review, and legal research automation</p>
+                    <h3>Legal Tech</h3>
+                    <p>Automated contract analysis, precedent research, and due diligence at machine speed.</p>
                 </div>
                 <div class="industry-card">
-                    <h3>Insurance</h3>
-                    <p>Claims processing, risk assessment, and customer service automation</p>
+                    <h3>FinTech & Insurance</h3>
+                    <p>Real-time fraud detection, algorithmic risk assessment, and claims processing automation.</p>
                 </div>
                 <div class="industry-card">
                     <h3>Construction & Real Estate</h3>
-                    <p>Project management, document processing, and market analysis solutions</p>
+                    <p>Predictive project management, generative design, and automated document processing.</p>
                 </div>
                 <div class="industry-card">
-                    <h3>Education</h3>
-                    <p>Personalized learning, administrative automation, and educational content generation</p>
+                    <h3>EdTech</h3>
+                    <p>Personalized adaptive learning pathways and automated administrative overhead reduction.</p>
                 </div>
             </div>
             <div class="text-center">
-                <a href="industries.html" class="btn btn-outline">Learn More</a>
+                <a href="industries.html" class="btn btn-outline">Explore Industries</a>
             </div>
         </div>
     </section>
@@ -180,23 +206,27 @@
     <!-- Why Choose Us -->
     <section class="why-choose-us">
         <div class="container">
-            <h2 class="section-title">Why Choose Cognitive Services LLC</h2>
+            <h2 class="section-title">The Cognitive Difference</h2>
             <div class="features-grid">
                 <div class="feature">
-                    <h3>Production-Ready Solutions</h3>
-                    <p>We deliver enterprise-grade AI systems built for scale, security, and reliability</p>
+                    <h3>Production First</h3>
+                    <p>We don't get stuck in "monitor-ware". We build systems designed to run in production from day
+                        one.</p>
                 </div>
                 <div class="feature">
-                    <h3>Real Business Impact</h3>
-                    <p>Our solutions automate actual business workflows, delivering measurable ROI</p>
+                    <h3>ROI Focused</h3>
+                    <p>Every line of code we write is tied to a business metric. We automate the work that moves the
+                        needle.</p>
                 </div>
                 <div class="feature">
-                    <h3>Security First</h3>
-                    <p>All implementations prioritize data security, compliance, and privacy</p>
+                    <h3>Secure by Design</h3>
+                    <p>Enterprise-grade security, data privacy, and compliance are baked into our architecture, not
+                        bolted on.</p>
                 </div>
                 <div class="feature">
-                    <h3>Expert Team</h3>
-                    <p>Experienced AI engineers and consultants with deep domain expertise</p>
+                    <h3>Deep Expertise</h3>
+                    <p>A team of senior AI engineers and researchers who have deployed systems at scale for Fortune
+                        500s.</p>
                 </div>
             </div>
         </div>
@@ -206,9 +236,9 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Transform Your Business with AI?</h2>
-                <p>Let's discuss how we can help automate your workflows and drive real business value</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Contact Us Today</a>
+                <h2>Ready to Automate the Future?</h2>
+                <p>Schedule a consultation to discover high-impact AI opportunities in your organization.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Schedule Consultation</a>
             </div>
         </div>
     </section>
@@ -218,11 +248,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Cognitive Services LLC</h3>
-                    <p>Designing and deploying secure, production-grade AI systems that automate real business workflows.</p>
+                    <h3>Cognitive Services</h3>
+                    <p>Designing and deploying secure, production-grade AI systems that automate real business
+                        workflows.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -232,8 +263,9 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Connect</h4>
                     <p>Email: <a href="mailto:info@cognitiveserv.com">info@cognitiveserv.com</a></p>
+                    <p>San Francisco, CA</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -244,5 +276,5 @@
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
